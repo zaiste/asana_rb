@@ -9,7 +9,7 @@ module AsanaRb
     base_uri "http://app.asana.com/api/#{version}"
     headers "Content-Type" => "application/json"
 
-    def self.api_key(key)
+    def self.api_key=(key)
       @@api_key = key
 
       @@auth = { 
