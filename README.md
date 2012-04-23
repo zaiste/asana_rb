@@ -2,6 +2,8 @@
 
 AsanaRb is a simple, lightweight Ruby wrapper for Asana API.
 
+*not yet released as a gem*
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,11 +22,22 @@ Or install it yourself as:
 
 ### Initalization
 
-    AsanaRb::Base.api_key 'your api key'
+    AsanaRb.configure { |c| c.api_key 'your api key' }
 
-### Task Creation
+### Task 
 
-    AsanaRb::Task.create('text', <workspace-id>, <assignee-email>)
+    # Create
+    AsanaRb::Task.create('text', '<workspace-id>', '<assignee-email>')
+
+    # List tasks from specified project 
+    AsanaRb::Task.list({ project: '<id>' })
+
+    # List tasks from specified workspace 
+    AsanaRb::Task.list({ workspace: '<id>' })
+
+    # Mark specified task as done
+    AsanaRb::Task.done('<id>')
+
 
 ## Contributing
 
