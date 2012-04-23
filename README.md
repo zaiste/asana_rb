@@ -1,6 +1,6 @@
 # AsanaRb
 
-AsanaRb is a simple Ruby wrapper for Asana API.
+AsanaRb is a simple, lightweight Ruby wrapper for Asana API.
 
 ## Installation
 
@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ### Task Creation
 
-    AsanaRb::Task.new('text', <workspace-id>, <assignee-email>)
+    AsanaRb::Task.create('text', <workspace-id>, <assignee-email>)
 
 ## Contributing
 
